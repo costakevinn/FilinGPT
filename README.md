@@ -1,4 +1,4 @@
-# FilinGPT
+# FilinGPT - A Byte-Level Financial Language Model
 
 Byte-level financial language model built from scratch using NumPy.
 
