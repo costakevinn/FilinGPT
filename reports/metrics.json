@@ -1,0 +1,36 @@
+{
+  "baseline_v1": {
+    "steps": 200,
+    "lr": 0.01,
+    "seed": 42,
+    "batch_size": 32,
+    "vocab_size": 258,
+    "ctx_len": 16,
+    "seq_len": 256,
+    "n_sequences": 609,
+    "batches_path": "data/training/batches.jsonl",
+    "start_loss": 5.55499267578125,
+    "final_loss": 5.318198204040527,
+    "start_ppl": 258.52507101946713,
+    "final_ppl": 204.01595550398085,
+    "ppl_reduction_pct": 21.08465353110055,
+    "n_logged_points": 200
+  },
+  "financial_v1": {
+    "steps": 100000,
+    "lr": 0.02,
+    "seed": 42,
+    "batch_size": 32,
+    "vocab_size": 258,
+    "ctx_len": 16,
+    "seq_len": 256,
+    "n_sequences": 609,
+    "batches_path": "data/training/batches.jsonl",
+    "start_loss": 5.55499267578125,
+    "final_loss": 0.8070619106292725,
+    "start_ppl": 258.52507101946713,
+    "final_ppl": 2.241313125005039,
+    "ppl_reduction_pct": 99.13303838727646,
+    "n_logged_points": 100000
+  }
+}

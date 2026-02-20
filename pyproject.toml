@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filingpt"
+version = "0.1.0"
+description = "From-scratch byte-level MLP language model trained on SEC 10-K MD&A."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["."]
