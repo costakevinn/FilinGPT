@@ -2,8 +2,7 @@
 
 Byte-level financial language model built from scratch using NumPy.
 
-FilinGPT is an end-to-end autoregressive language modeling system trained on SEC 10-K filings.  
-The project demonstrates custom neural network implementation, financial NLP preprocessing, and quantitative evaluation without relying on deep learning frameworks.
+FilinGPT is an end-to-end autoregressive language modeling system trained on SEC 10-K filings. The project demonstrates custom neural network implementation, financial NLP preprocessing, and quantitative evaluation without relying on deep learning frameworks.
 
 ---
 
@@ -12,10 +11,11 @@ The project demonstrates custom neural network implementation, financial NLP pre
 - Custom MLP-based autoregressive model (NumPy only)
 - Byte-level tokenization (vocab size = 258)
 - Context window: 16 tokens
-- Cross-entropy training with perplexity tracking
+- Cross-entropy optimization with perplexity tracking
 - Full ETL pipeline (10-K → MDA → chunks → batches)
 - Dockerized execution
 - Automated training comparison reports
+- RAG-ready financial document structure
 
 ---
 
@@ -45,15 +45,18 @@ The model reduced perplexity from 258 → 2.24, demonstrating strong convergence
 
 ## 💬 Generation Quality
 
-### Baseline (200 steps)
+<table>
+<tr>
+<td align="center"><b>Baseline (200 steps)</b></td>
+<td align="center"><b>Financial (100k steps)</b></td>
+</tr>
+<tr>
+<td><img src="reports/baseline_chat.png" width="100%"/></td>
+<td><img src="reports/financial_chat.png" width="100%"/></td>
+</tr>
+</table>
 
-![Baseline Output](reports/baseline_chat.png)
-
-### Financial Model (100k steps)
-
-![Financial Output](reports/financial_chat.png)
-
-The financial checkpoint produces structured financial English with recognizable domain terminology.
+The baseline model produces mostly incoherent byte-level noise, while the financial checkpoint generates structured financial English with recognizable domain terminology.
 
 ---
 
@@ -79,12 +82,10 @@ Designed for reproducibility and modular ML experimentation.
 - Cross-entropy optimization
 - Perplexity evaluation
 - Byte-level NLP
+- Financial domain language modeling
 - Data pipeline engineering
-- Domain-specific language learning
 - Reproducible ML systems
-- RAG-ready financial document processing pipeline
-
-The dataset structure and preprocessing stages make the system directly extensible to Retrieval-Augmented Generation (RAG) architectures.
+- Retrieval-ready document preprocessing (RAG extensibility)
 
 ---
 
@@ -100,4 +101,3 @@ docker run --rm -it -v "$(pwd):/app" -w /app filingpt python -m app.chat
 ## 📄 License
 
 This project is licensed under the MIT License.
-
