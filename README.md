@@ -110,4 +110,4 @@ docker run --rm -it -v "$(pwd):/app" -w /app filingpt python -m app.chat
 
 ## License
 
-MIT License
+MIT License — see `LICENSE` for details.
