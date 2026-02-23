@@ -2,70 +2,71 @@
 
 A byte-level autoregressive language model trained on real SEC 10-K filings, implemented entirely in Python using NumPy.
 
-FilinGPT is not a framework wrapper — it is a full end-to-end machine learning system designed from data ingestion to inference, emphasizing statistical rigor, modular architecture, and reproducible experimentation.
+FilinGPT is a full end-to-end machine learning system — from financial document ingestion to inference — designed with modular architecture, structured data pipelines, and reproducible experimentation.
 
 Author: Kevin Mota da Costa
-
 Portfolio: [https://costakevinn.github.io](https://costakevinn.github.io)
-
-LinkedIn: [https://linkedin.com/in/costakevinnn](https://linkedin.com/in/costakevinnn/)
+LinkedIn: [https://linkedin.com/in/SEUUSER](https://linkedin.com/in/SEUUSER)
 
 ---
 
 ## 🎯 Project Purpose
 
-FilinGPT was built to deeply explore how language models work at a systems level — without relying on high-level deep learning abstractions.
+FilinGPT was built to explore language model training at a systems level, without relying on high-level deep learning frameworks.
 
 The project integrates:
 
-* Financial document processing (SEC 10-K)
-* Structured ETL and dataset layering
-* Custom neural network implementation (NumPy)
-* Controlled training experiments
+* Financial document extraction (SEC 10-K)
+* Structured ETL pipelines
+* Dataset layering (Bronze / Silver / Gold)
+* Byte-level tokenization
+* Custom neural network training (NumPy-based)
 * Quantitative evaluation (loss & perplexity)
-* Reproducible ML workflows
+* Dockerized reproducibility
 
-It reflects my focus on building machine learning systems that combine statistical modeling with disciplined data engineering.
+It reflects my approach to combining machine learning modeling with disciplined data engineering.
 
 ---
 
 ## 🧠 System Architecture
 
-The system follows a structured ML lifecycle:
+The ML pipeline follows a structured lifecycle:
 
 Raw SEC 10-K filings
 → Section extraction (10-K & MD&A)
-→ Bronze / Silver / Gold dataset layering
+→ Dataset layering
 → Chunking & tokenization
-→ Batch construction
+→ Batch generation
 → Autoregressive model training
-→ Evaluation & metric reporting
+→ Evaluation & metric tracking
 → Inference / interactive generation
+
+---
 
 ### Repository Structure
 
 ```
-data/     → Layered financial datasets
-etl/      → Document extraction & processing
+data/     → Layered financial datasets (bronze/silver/gold)
+etl/      → 10-K extraction pipeline
 prep/     → Chunking, tokenization, batching
-core/     → Model definition, training loop, inference
-reports/  → Training metrics & comparisons
+core/     → Model, training loop, inference
+reports/  → Metrics & comparisons
 app/      → Interactive chat interface
 ```
 
-The architecture separates data engineering from modeling logic, enabling reproducibility and controlled experimentation.
+The architecture clearly separates data engineering from modeling logic, enabling traceability and reproducibility.
 
 ---
 
 ## 🏗 Model Design
 
-* Byte-level tokenization
+* Byte-level tokenizer
 * Custom autoregressive MLP architecture
 * Manual training loop implementation
 * Explicit loss tracking
 * Controlled hyperparameter configuration
 
-The objective was to understand optimization dynamics, convergence behavior, and financial language structure from first principles.
+The goal was to understand optimization dynamics, convergence behavior, and structured financial language learning from first principles.
 
 ---
 
@@ -76,7 +77,7 @@ The objective was to understand optimization dynamics, convergence behavior, and
 | Final Loss       | 5.3182               | 0.8071                       |
 | Final Perplexity | 204.02               | **2.24**                     |
 
-The trained model demonstrates significant convergence and learns structured financial terminology, formatting patterns, and document style.
+The trained model significantly improves over the baseline, learning structured financial terminology and formatting patterns from real corporate filings.
 
 ---
 
@@ -90,7 +91,7 @@ The trained model demonstrates significant convergence and learns structured fin
 
 ![Loss Comparison](reports/compare_loss_logx.png)
 
-The comparison highlights how training depth and dataset quality influence convergence stability and predictive confidence.
+The comparison highlights the impact of training depth and structured dataset construction on convergence stability.
 
 ---
 
@@ -107,32 +108,27 @@ The comparison highlights how training depth and dataset quality influence conve
 </tr>
 </table>
 
-The baseline model produces incoherent sequences, while the trained financial model generates structured, domain-aligned financial text.
+The baseline model produces incoherent output, while the trained financial model generates structured financial language with recognizable terminology and formatting patterns.
 
 ---
 
 ## 📚 Engineering Decisions
 
-* Built with NumPy to expose internal model mechanics
-* Structured dataset layering for traceable data evolution
-* Explicit hyperparameter control for training stability
+* Implemented with NumPy to expose internal model mechanics
+* Layered dataset design for controlled data evolution
+* Explicit hyperparameter control for stability
 * Separation of data, model, and interface layers
-* Dockerized environment for reproducibility
+* Dockerized environment for reproducible execution
 
 ---
 
 ## 🛠 Tech Stack
 
 Python
-
 NumPy
-
 Structured ETL pipelines
-
 Financial NLP
-
 Docker
-
 Modular ML architecture
 
 ---
