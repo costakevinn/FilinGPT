@@ -125,11 +125,17 @@ The baseline model produces incoherent output, while the trained financial model
 ## 🛠 Tech Stack
 
 Python
+
 NumPy
+
 Structured ETL pipelines
+
 Financial NLP
+
 Docker
+
 Modular ML architecture
+
 
 ---
 
