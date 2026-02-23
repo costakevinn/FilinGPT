@@ -5,8 +5,10 @@ A byte-level autoregressive language model trained on real SEC 10-K filings, imp
 FilinGPT is a full end-to-end machine learning system — from financial document ingestion to inference — designed with modular architecture, structured data pipelines, and reproducible experimentation.
 
 Author: Kevin Mota da Costa
+
 Portfolio: [https://costakevinn.github.io](https://costakevinn.github.io)
-LinkedIn: [https://linkedin.com/in/SEUUSER](https://linkedin.com/in/SEUUSER)
+
+LinkedIn: [https://linkedin.com/in/costakevinnn](https://linkedin.com/in/costakevinnn)
 
 ---
 
