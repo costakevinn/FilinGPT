@@ -124,10 +124,15 @@ The baseline model produces incoherent sequences, while the trained financial mo
 ## 🛠 Tech Stack
 
 Python
+
 NumPy
+
 Structured ETL pipelines
+
 Financial NLP
+
 Docker
+
 Modular ML architecture
 
 ---
