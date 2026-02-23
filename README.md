@@ -5,7 +5,9 @@ A byte-level autoregressive language model trained on real SEC 10-K filings, imp
 FilinGPT is not a framework wrapper — it is a full end-to-end machine learning system designed from data ingestion to inference, emphasizing statistical rigor, modular architecture, and reproducible experimentation.
 
 Author: Kevin Mota da Costa
+
 Portfolio: [https://costakevinn.github.io](https://costakevinn.github.io)
+
 LinkedIn: [https://linkedin.com/in/SEUUSER](https://linkedin.com/in/SEUUSER)
 
 ---
